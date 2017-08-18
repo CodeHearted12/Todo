@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Todos</h1>
+    <form action="/" method= "POST">
+      <input placeholder="what else must you do?" name="newTodo" />
+        <button type="submit" name="Todo"></button>
+    <form>
+      <ul>
+
+        {{ #todos }}
+        <li>
+          {{ #completed }} <del> {{ /complete }}
+          {{ text }}
+          {{ #compete }} </del> {{ /complete }}
+          <form aciton="/mark complete/{{ id }}" method="POST"</li>
+            <button>mark complete</button>
+          </form>
+        </li>
+        {{ /todos }}
+
+      </ul>
+    </form>
+  </body>
+</html>
