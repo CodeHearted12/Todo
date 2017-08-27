@@ -28,16 +28,17 @@ listOfTodos.push(newTodoObject);
   console.log(listOfTodos);
   response.redirect('/');
 
-});
 
-app.post('/mark-complete/:id')
+});
+app.post('/mark-complete/:id') function(request.response){
 let idOfTheTodoThatImMarkingComplete = parseInt (request.params.id);
 let completedTodo = listOfTodos.find(function (todo) {
   return todo.id === idOfTheTodoThatImMarkingComplete
-})
+
+});
 competedTodo.compete = true;
 response.redirect('/');
-
+)
  app.listen(3000, function () {
    console.log("Hello")
  });
